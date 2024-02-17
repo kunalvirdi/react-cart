@@ -1,0 +1,13 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-weight: lighter;
+    font-size: 1.75rem;
+}
+.cart{
+    width: 32px;
+    cursor: pointer;
+}
