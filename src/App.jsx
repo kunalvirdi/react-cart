@@ -1,16 +1,21 @@
 import {useEffect} from "react";
 import {getProducts} from "./services/product-api.js";
-import {useSelector,useDispatch} from "react-redux";
+import {useDispatch} from "react-redux";
+import Main from "./Layout/Main/Main.jsx";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import Products from "./components/Products/Products.jsx";
 
 const App=()=>{
-    const products=useSelector(state=>state.product)
-
     const Dispatch=useDispatch()
     useEffect(() => {
-        Dispatch(getProducts(20,0))
+        Dispatch(getProducts(21,0))
     }, [Dispatch]);
-  return (
 
+  return (
+      <Main>
+          <Navbar/>
+          <Products/>
+      </Main>
   )
 }
 
